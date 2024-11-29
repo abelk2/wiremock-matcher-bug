@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.0.0"
+    application
 }
 
 group = "com.genesys.wiremock.repro.matcherbug"
@@ -15,9 +16,10 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:2.0.16")
 }
 
-tasks.test {
-    useJUnitPlatform()
+application {
+    mainClass = "com.genesys.wiremock.repro.matcherbug.MainKt"
 }
+
 kotlin {
     jvmToolchain(21)
 }

@@ -53,4 +53,6 @@ fun main() {
     assert(response.status.value == 200) {
         "Expected status code 200, but got ${response.status.value}"
     }
+
+    wireMockServer.stop()
 }
